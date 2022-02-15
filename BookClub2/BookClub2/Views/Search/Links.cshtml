@@ -1,0 +1,16 @@
+﻿
+@model List<BookClub2.Models.Author>
+
+@{
+    Layout = "~/Views/Shared/_RankLayout.cshtml";
+    ViewData["Title"] = "Useful links";
+}
+
+<h2>Wyszukaj autorów w Google</h2>
+
+<ul class="list-group">
+    @foreach(var item in Model)
+    {
+        <browse-author forename="@item.Forename" lastname="@item.Surname" yob="@item.Yob" cob="@item.CountryOfBirth"></browse-author>
+    }
+</ul>
